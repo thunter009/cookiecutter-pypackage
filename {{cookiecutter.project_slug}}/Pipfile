@@ -4,13 +4,12 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-bump2version = "*"
+# bump2version = "*"
 wheel = "*"
 watchdog = "*"
 pylint = "*"
 {% if cookiecutter.use_pytest == 'y' -%}
-pytest = "*"
-{% endif %}
+pytest = "*"{% endif %}
 flake8 = "*"
 pdbpp = "*"
 tox = "*"
@@ -20,5 +19,4 @@ twine = "*"
 
 [packages]
 {% if cookiecutter.command_line_interface|lower == 'click' -%}
-Click = "*"
-{% endif %}
+Click = "*"{% endif %}

@@ -5,7 +5,7 @@ setup(
     name='cookiecutter-pypackage',
     packages=[],
     version='0.1.0',
-    description='Cookiecutter template for a Python package using poetry and optional data classes scaffolding',
+    description='Cookiecutter template for a Python package using pipenv and optional data classes scaffolding',
     author='Tom Hunter',
     license='BSD',
     author_email='tom@realfactors.com',

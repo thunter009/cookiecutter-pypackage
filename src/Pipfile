@@ -1,0 +1,24 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+bump2version = "*"
+wheel = "*"
+watchdog = "*"
+pylint = "*"
+{% if cookiecutter.use_pytest == 'y' -%}
+pytest = "*"
+{% endif %}
+flake8 = "*"
+pdbpp = "*"
+tox = "*"
+coverage = "*"
+Sphinx = "*"
+twine = "*"
+
+[packages]
+{% if cookiecutter.command_line_interface|lower == 'click' -%}
+Click = "*"
+{% endif %}

@@ -4,7 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-# bump2version = "*"
+bump2version = "*"
 wheel = "*"
 watchdog = "*"
 pylint = "*"
@@ -20,3 +20,8 @@ twine = "*"
 [packages]
 {% if cookiecutter.command_line_interface|lower == 'click' -%}
 Click = "*"{% endif %}
+python-dotenv = "*"
+{{ cookiecutter.project_slug.replace("_","-") }} = {editable = true, path = "."}
+
+[requires]
+python_version = "3.7"

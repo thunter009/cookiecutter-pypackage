@@ -10,6 +10,7 @@
   "use_pytest": "n",
   "use_pypi_deployment_with_travis": "y",
   "add_pyup_badge": "n",
+  "use_logging": "y",
   "command_line_interface": ["Click", "Argparse", "No command-line interface"],
   "create_author_file": "y",
   "include_dataclasses_scaffolding": "y",

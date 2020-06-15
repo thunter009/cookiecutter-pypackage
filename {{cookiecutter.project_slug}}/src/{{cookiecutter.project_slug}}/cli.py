@@ -8,6 +8,24 @@ import sys
 import click
 {%- endif %}
 
+{% if cookiecutter.use_logging == 'y' %}
+import logging
+from {{ cookiecutter.project_slug }}.settings import LOGGING_DATE_FORMAT, LOGGING_FORMAT, LOGGING_PATH
+
+FILE_NAME = __name__
+logging.basicConfig(level=logging.INFO,
+                    datefmt=LOGGING_DATE_FORMAT,
+                    format=LOGGING_FORMAT,
+                    handlers=[
+                        logging.FileHandler(
+                            f"{LOGGING_PATH}/{FILE_NAME}.log",
+                            encoding=None,
+                            delay=False),
+                        logging.StreamHandler()
+                    ])
+logger = logging.getLogger()
+{%- endif %}
+
 {% if cookiecutter.command_line_interface|lower == 'click' %}
 @click.command()
 def main(args=None):

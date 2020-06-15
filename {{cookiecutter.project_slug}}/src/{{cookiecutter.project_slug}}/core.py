@@ -1,6 +1,6 @@
 """Main module. If include_dataclasses_scaffolding is enabled, you will see Data Class scaffolding here"""
 
-# {%- if cookiecutter.include_dataclasses_scaffolding == 'y' %}
+{%- if cookiecutter.include_dataclasses_scaffolding == 'y' %}
 from dataclasses import dataclass
 from datetime import datetime
 
